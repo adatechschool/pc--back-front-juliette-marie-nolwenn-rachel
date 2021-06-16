@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Banquette convertible",
+    "id": 1,
+    "prix": 150
+  },
+  {
+    "name": "Lampe à poser",
+    "id": 2,
+    "prix": 150
+  },
+  {
+    "name": "Lit enfant",
+    "id": 3,
+    "prix": 150
+  },
+  {
+    "name": "Armoire",
+    "id": 3,
+    "prix": 150
+  },
+  {
+    "name": "Banquette convertible",
+    "id": 4,
+    "prix": 150
+  },
+  {
+    "name": "Armoire",
+    "id": 5,
+    "prix": 150
+  },
+  {
+    "name": "Lit enfant",
+    "id": 6,
+    "prix": 150
+  },
+  {
+    "name": "Lot chaises anciennes",
+    "id": 7,
+    "prix": 150
+  },
+  {
+    "name": "Minibar mapMonde",
+    "id": 8,
+    "prix": 150
+  },
+  {
+    "name": "ZZZ Job123",
+    "id": 9
+  },
+  {
+    "name": "ZZZ Job567",
+    "id": 10
+  },
+  {
+    "name": "ZaZZ Job999",
+    "id": 11
+  },
+  {
+    "name": "ZZZ Journey",
+    "id": 12
+  },
+  {
+    "name": "ZZZ Indigo",
+    "id": 13
+  }
+]
