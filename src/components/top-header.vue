@@ -54,7 +54,7 @@ export default {
   methods: {
     search() {
       console.log(this.searchText);
-      this.$store.dispatch("recherche", { text: this.searchText });
+      this.$store.dispatch("search", { text: this.searchText });
     },
   },
   data() {

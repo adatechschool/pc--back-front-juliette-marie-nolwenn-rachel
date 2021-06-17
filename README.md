@@ -33,4 +33,6 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## lien vers le tuto:
-https://www.youtube.com/watch?v=-DyKeMa5tYY
+1ere partie: https://www.youtube.com/watch?v=-DyKeMa5tYY
+
+2eme partie: https://www.youtube.com/watch?v=G2krb6FaZco
