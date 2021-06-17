@@ -10,10 +10,9 @@
         style="max-width: 20rem"
         class="mb-2"
       >
-        <b-card-text :title="name">
-          {{ name }}
+        <b-card-text :title="pix">
+          {{ prix }}€
         </b-card-text>
-
         <b-button
           v-b-tooltip.hover
           title="Tooltip content"

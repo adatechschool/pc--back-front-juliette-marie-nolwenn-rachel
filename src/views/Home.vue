@@ -5,6 +5,7 @@
         <furniture_card
           :name="furniture.name"
           :id="furniture.id"
+          :prix="furniture.prix"
           v-for="furniture in getDisplayFurnitures"
           :key="furniture.id"
         ></furniture_card>
