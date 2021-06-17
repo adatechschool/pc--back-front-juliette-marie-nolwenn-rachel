@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <div class="page" v-if="getSpinner">
-      <b-spinner class="spinner" :variant="'primary'" :key="'primary'"></b-spinner>
+      <b-spinner
+        class="spinner"
+        :variant="'primary'"
+        :key="'primary'"
+      ></b-spinner>
     </div>
     <div id="nav">
       <top-header></top-header>
@@ -15,8 +19,8 @@ import { mapGetters } from "vuex";
 export default {
   components: { "top-header": TopHeader },
   computed: {
-    ...mapGetters(["getSpinner"])
-  }
+    ...mapGetters(["getSpinner"]),
+  },
 };
 </script>
 

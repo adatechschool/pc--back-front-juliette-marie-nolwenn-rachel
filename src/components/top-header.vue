@@ -1,7 +1,9 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">Anciens meubles pour une nouvelle vie</b-navbar-brand>
+      <b-navbar-brand href="#"
+        >Anciens meubles pour une nouvelle vie</b-navbar-brand
+      >
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -53,13 +55,13 @@ export default {
     search() {
       console.log(this.searchText);
       this.$store.dispatch("recherche", { text: this.searchText });
-    }
+    },
   },
   data() {
     return {
-      searchText: ""
+      searchText: "",
     };
-  }
+  },
 };
 </script>
 

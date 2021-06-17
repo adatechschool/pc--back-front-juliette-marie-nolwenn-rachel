@@ -8,7 +8,7 @@ export default new Vuex.Store({
     furnitures: [],
     displayFurnitures: [],
     rows: 0,
-    showSpinner: false
+    showSpinner: false,
   },
   mutations: {
     SET_FURNITURES(state, furnitures) {
@@ -22,12 +22,12 @@ export default new Vuex.Store({
     },
     SET_SPINNER(state, spinner) {
       state.showSpinner = spinner;
-    }
+    },
   },
   actions: {
     async fetchData({ commit }) {
       commit("SET_SPINNER", true);
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         setTimeout(async () => {
           const res = await fetch("furnitures.json");
           const val = await res.json();
@@ -53,16 +53,16 @@ export default new Vuex.Store({
     },
     async search({ dispatch }, { text }) {
       const myJson = await dispatch("fetchData");
-      const values = myJson.filter(val => {
+      const values = myJson.filter((val) => {
         return val.name.toLowerCase().includes(text.toLowerCase());
       });
 
       dispatch("updatePagination", {
         myJson: values,
         currentPage: 1,
-        perPage: 3
+        perPage: 3,
       });
-    }
+    },
   },
   getters: {
     getFurnitures(state) {
@@ -76,7 +76,7 @@ export default new Vuex.Store({
     },
     getSpinner(state) {
       return state.showSpinner;
-    }
+    },
   },
-  modules: {}
+  modules: {},
 });
