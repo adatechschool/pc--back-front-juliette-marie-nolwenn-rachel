@@ -2,48 +2,105 @@
   <div class="connexion">
     <div class="login-page">
       <transition name="fade">
-         <div v-if="!registerActive" class="wallpaper-login"></div>
+        <div v-if="!registerActive" class="wallpaper-login"></div>
       </transition>
       <div class="wallpaper-register"></div>
 
       <div class="container">
-         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-8 mx-auto">
-               <div v-if="!registerActive" class="card login" v-bind:class="{ error: emptyFields }">
-                  <h1>Connectez vous</h1>
-                  <form class="form-group">
-                     <input v-model="emailLogin" type="email" class="form-control" placeholder="Email" required>
-                     <input v-model="passwordLogin" type="password" class="form-control" placeholder="Password" required>
-                     <input type="submit" class="btn btn-primary" @click="doLogin">
-                     <p>Pas encore de compte? <a href="#" @click="registerActive = !registerActive, emptyFields = false">Inscrivez-vous ici</a>
-                     </p>
-                     <p><a href="#">Mot de passe oublié?</a></p>
-                  </form>
-               </div>
-
-               <div v-else class="card register" v-bind:class="{ error: emptyFields }">
-                  <h1>Sign Up</h1>
-                  <form class="form-group">
-                     <input v-model="emailReg" type="email" class="form-control" placeholder="Email" required>
-                     <input v-model="passwordReg" type="password" class="form-control" placeholder="Password" required>
-                     <input v-model="confirmReg" type="password" class="form-control" placeholder="Confirm Password" required>
-                     <input type="submit" class="btn btn-primary" @click="doRegister">
-                     <p>Already have an account? <a href="#" @click="registerActive = !registerActive, emptyFields = false">Sign in here</a>
-                     </p>
-                  </form>
-               </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-8 mx-auto">
+            <div
+              v-if="!registerActive"
+              class="card login"
+              v-bind:class="{ error: emptyFields }"
+            >
+              <h1>Connectez vous</h1>
+              <form class="form-group">
+                <input
+                  v-model="emailLogin"
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  v-model="passwordLogin"
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  required
+                />
+                <input type="submit" class="btn btn-primary" @click="doLogin" />
+                <p>
+                  Pas encore de compte?
+                  <a
+                    href="#"
+                    @click="
+                      (registerActive = !registerActive), (emptyFields = false)
+                    "
+                    >Inscrivez-vous ici</a
+                  >
+                </p>
+                <p><a href="#">Mot de passe oublié?</a></p>
+              </form>
             </div>
-         </div>
 
+            <div
+              v-else
+              class="card register"
+              v-bind:class="{ error: emptyFields }"
+            >
+              <h1>Sign Up</h1>
+              <form class="form-group">
+                <input
+                  v-model="emailReg"
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  v-model="passwordReg"
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  required
+                />
+                <input
+                  v-model="confirmReg"
+                  type="password"
+                  class="form-control"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <input
+                  type="submit"
+                  class="btn btn-primary"
+                  @click="doRegister"
+                />
+                <p>
+                  Already have an account?
+                  <a
+                    href="#"
+                    @click="
+                      (registerActive = !registerActive), (emptyFields = false)
+                    "
+                    >Sign in here</a
+                  >
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-   </div>
-
+    </div>
   </div>
 </template>
-// <script>
+//
+<script>
 // var app = new Vue({
 //    el: "#app",
-   
+
 //    data: {
 //       registerActive: false,
 //       emailLogin: "",
@@ -53,7 +110,7 @@
 //       confirmReg: "",
 //       emptyFields: false
 //    },
-   
+
 //    methods: {
 //       doLogin() {
 //          if (this.emailLogin === "" || this.passwordLogin === "") {
@@ -62,7 +119,7 @@
 //             alert("You are now logged in");
 //          }
 //       },
-      
+
 //       doRegister() {
 //          if (this.emailReg === "" || this.passwordReg === "" || this.confirmReg === "") {
 //             this.emptyFields = true;
@@ -72,79 +129,74 @@
 //       }
 //    }
 // });
-// </script>
+//
+</script>
 
 <style>
 p {
-   line-height: 1rem;
+  line-height: 1rem;
 }
 
 .card {
-   padding: 20px;
+  padding: 20px;
 }
 
-
 .form-group input {
-      margin-bottom: 20px;
-   }
-
+  margin-bottom: 20px;
+}
 
 .login-page {
-   align-items: center;
-   display: flex;
-   height: 100vh;
+  align-items: center;
+  display: flex;
+  height: 100vh;
 }
 
 .login-page .wallpaper-login {
-
-      height: 100%;
-      position: absolute;
-      width: 100%;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
-   
+
 .login-page .fade-enter-active,
 .login-page .fade-leave-active {
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 .login-page .fade-enter,
 .login-page .fade-leave-to {
-      opacity: 0;
+  opacity: 0;
 }
-   
-.login-page .wallpaper-register {
 
-      height: 100%;
-      position: absolute;
-      width: 100%;
-      z-index: -1;
+.login-page .wallpaper-register {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
 }
 
 .login-page h1 {
-      margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-
 .error {
-   animation-name: errorShake;
-   animation-duration: 0.3s;
+  animation-name: errorShake;
+  animation-duration: 0.3s;
 }
 
 @keyframes errorShake {
-   0% {
-      transform: translateX(-25px);
-   }
-   25% {
-      transform: translateX(25px);
-   }
-   50% {
-      transform: translateX(-25px);
-   }
-   75% {
-      transform: translateX(25px);
-   }
-   100% {
-      transform: translateX(0);
-   }
+  0% {
+    transform: translateX(-25px);
+  }
+  25% {
+    transform: translateX(25px);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+  75% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
-
 </style>

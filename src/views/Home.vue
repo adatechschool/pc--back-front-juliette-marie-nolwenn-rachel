@@ -5,6 +5,7 @@
         <furniture_card
           :name="furniture.name"
           :id="furniture.id"
+          :prix="furniture.prix"
           v-for="furniture in getDisplayFurnitures"
           :key="furniture.id"
         ></furniture_card>
@@ -36,12 +37,12 @@ export default {
   data() {
     return {
       currentPage: 1,
-      perPage: 3
+      perPage: 3,
     };
   },
-  components: { "furniture_card": Furniturecard},
+  components: { furniture_card: Furniturecard },
   computed: {
-    ...mapGetters(["getRows", "getDisplayFurnitures"])
+    ...mapGetters(["getRows", "getDisplayFurnitures"]),
   },
   methods: {
     paginate(currentPage) {
@@ -49,8 +50,8 @@ export default {
     },
     async getRecords() {
       await this.$store.dispatch("fetchFurnitures");
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

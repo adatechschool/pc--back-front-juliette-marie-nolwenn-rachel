@@ -43,25 +43,5 @@
     "name": "Minibar mapMonde",
     "id": 8,
     "prix": 150
-  },
-  {
-    "name": "ZZZ Job123",
-    "id": 9
-  },
-  {
-    "name": "ZZZ Job567",
-    "id": 10
-  },
-  {
-    "name": "ZaZZ Job999",
-    "id": 11
-  },
-  {
-    "name": "ZZZ Journey",
-    "id": 12
-  },
-  {
-    "name": "ZZZ Indigo",
-    "id": 13
   }
 ]
