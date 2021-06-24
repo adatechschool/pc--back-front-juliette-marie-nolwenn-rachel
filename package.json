@@ -38,5 +38,18 @@
     "sass-loader": "^8.0.0",
     "vue-cli-plugin-bootstrap-vue": "^0.5.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "description": "## Project setup ``` npm install ``` npm install @vue/cli ``` vue add bootstrap-vue ``` vue add eslint  ```   (pour installer le linter qui formate le code) en cas de probleme : https://cli.vuejs.org/core-plugins/eslint.html#injected-commands",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adatechschool/pc--back-front-juliette-marie-nolwenn-rachel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adatechschool/pc--back-front-juliette-marie-nolwenn-rachel/issues"
+  },
+  "homepage": "https://github.com/adatechschool/pc--back-front-juliette-marie-nolwenn-rachel#readme"
 }

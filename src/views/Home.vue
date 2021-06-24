@@ -3,9 +3,9 @@
     <b-container>
       <b-row align-v="center">
         <furniture_card
-          :name="furniture.name"
+          :title="furniture.title"
           :id="furniture.id"
-          :prix="furniture.prix"
+          :price="furniture.price"
           v-for="furniture in getDisplayFurnitures"
           :key="furniture.id"
         ></furniture_card>
@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       currentPage: 1,
-      perPage: 3,
+      perPage: 4,
     };
   },
   components: { furniture_card: Furniturecard },
@@ -45,6 +45,7 @@ export default {
     ...mapGetters(["getRows", "getDisplayFurnitures"]),
   },
   methods: {
+    // to go to backend and do an http request
     paginate(currentPage) {
       this.$store.dispatch("paginate", { currentPage, perPage: this.perPage });
     },

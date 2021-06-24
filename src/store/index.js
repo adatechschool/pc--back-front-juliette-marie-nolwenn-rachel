@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(Vuex);
 
@@ -29,8 +30,10 @@ export default new Vuex.Store({
       commit("SET_SPINNER", true);
       return new Promise((resolve) => {
         setTimeout(async () => {
-          const res = await fetch("furnitures.json");
-          const val = await res.json();
+          const res = await axios.get("http://localhost:3000/api/products/all");
+          //const res = await fetch("furnitures.json");
+          console.log(res);
+          const val = await res.data;
           resolve(val);
           commit("SET_SPINNER", false);
         }, 1000);
@@ -43,25 +46,23 @@ export default new Vuex.Store({
     },
     async fetchFurnitures({ dispatch }) {
       const myJson = await dispatch("fetchData");
-      dispatch("updatePagination", { myJson, currentPage: 1, perPage: 3 });
+      dispatch("updatePagination", { myJson, currentPage: 1, perPage: 4 });
       return myJson;
     },
-    async paginate({ commit, state }, { currentPage, perPage }) {
-      const start = (currentPage - 1) * perPage;
-      const furnitures = state.furnitures.slice(start, start + 3);
+    async paginate({ commit, state }) {
+      const furnitures = state.furnitures;
       commit("SET_DISPLAY_FURNITURES", furnitures);
     },
     async search({ dispatch }, { text }) {
       const myJson = await dispatch("fetchData");
       const values = myJson.filter((val) => {
-        
         return val.name.toLowerCase().includes(text.toLowerCase());
       });
 
       dispatch("updatePagination", {
         myJson: values,
         currentPage: 1,
-        perPage: 3,
+        perPage: 4,
       });
     },
   },

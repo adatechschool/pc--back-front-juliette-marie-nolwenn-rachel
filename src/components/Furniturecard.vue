@@ -1,18 +1,17 @@
 <template>
   <div>
     <b-col>
+      <img :title="pic" :src="pic" />
       <b-card
-        :title="name"
-        img-src="https://picsum.photos/600/300/?image=25"
+        :title="pic"
+        img-src=""
         img-alt="Image"
         img-top
         tag="article"
         style="max-width: 20rem"
         class="mb-2"
       >
-        <b-card-text :title="pix">
-          {{ prix }}€
-        </b-card-text>
+        <b-card-text :title="price"> {{ price }}€ </b-card-text>
         <b-button
           v-b-tooltip.hover
           title="Tooltip content"
@@ -20,7 +19,7 @@
           variant="primary"
           >Acheter</b-button
         >
-        <b-modal :id="modalId" :title="name">
+        <b-modal :id="modalId" :title="title">
           <div>
             <b-card no-body>
               <b-tabs card>
@@ -57,13 +56,12 @@
                     set</b-card-title
                   >
                   <b-card-text>
-                    Quis magna Lorem anim amet ipsum do mollit sit cillum
-                    voluptate ex nulla tempor. Laborum consequat non elit enim
-                    exercitation cillum aliqua consequat id aliqua. Esse ex
-                    consectetur mollit voluptate est in duis laboris ad sit
-                    ipsum anim Lorem. Incididunt veniam velit elit elit veniam
-                    Lorem aliqua quis ullamco deserunt sit enim elit aliqua esse
-                    irure.
+                    Lorem anim amet ipsum do mollit sit cillum voluptate ex
+                    nulla tempor. Laborum consequat non elit enim exercitation
+                    cillum aliqua consequat id aliqua. Esse ex consectetur
+                    mollit voluptate est in duis laboris ad sit ipsum anim
+                    Lorem. Incididunt veniam velit elit elit veniam Lorem aliqua
+                    quis ullamco deserunt sit enim elit aliqua esse irure.
                   </b-card-text>
                 </b-tab>
                 <b-button
@@ -84,7 +82,7 @@
 
 <script>
 export default {
-  props: ["name", "id", "prix"],
+  props: ["title", "id", "price", "pic"],
   computed: {
     modalId() {
       return `modal-${this.id}`;

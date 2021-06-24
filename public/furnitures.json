@@ -1,47 +1,55 @@
 [
   {
-    "name": "Banquette convertible",
     "id": 1,
-    "prix": 1200
+    "title": "Table en bois d'arbre",
+    "price": 160,
+    "dim_l": 200,
+    "dim_w": 120,
+    "dim_h": 90,
+    "pic": "https://images-na.ssl-images-amazon.com/images/I/516qbjCXW5L._AC_.jpg",
+    "category": "table",
+    "color": "dark_wood",
+    "material": "wood",
+    "status": "validation_pending"
   },
   {
-    "name": "Lampe à poser",
     "id": 2,
-    "prix": 150
+    "title": "Tabouret de traite en vrai bois de vrai arbre",
+    "price": 120,
+    "dim_l": 60,
+    "dim_w": 60,
+    "dim_h": 60,
+    "pic": "https://media.paruvendu.fr/image/tabouret-traite/WB15/1/1/WB151113804_1.jpeg",
+    "category": "stool",
+    "color": "dark_wood",
+    "material": "wood",
+    "status": "validation_pending"
   },
   {
-    "name": "Lit enfant",
     "id": 3,
-    "prix": 460
+    "title": "Chaise",
+    "price": 160,
+    "dim_l": 200,
+    "dim_w": 120,
+    "dim_h": 90,
+    "pic": "https://images-na.ssl-images-amazon.com/images/I/516qbjCXW5L._AC_.jpg",
+    "category": "table",
+    "color": "dark_wood",
+    "material": "wood",
+    "status": "validation_pending"
   },
+
   {
-    "name": "Armoire",
-    "id": 3,
-    "prix": 575
-  },
-  {
-    "name": "Téléviseur HD",
     "id": 4,
-    "prix": 120
-  },
-  {
-    "name": "Secrétaire en bois massif",
-    "id": 5,
-    "prix": 349
-  },
-  {
-    "name": "Lit gigogne",
-    "id": 6,
-    "prix": 130
-  },
-  {
-    "name": "Lot chaises anciennes",
-    "id": 7,
-    "prix": 245
-  },
-  {
-    "name": "Minibar années 30",
-    "id": 8,
-    "prix": 290
+    "title": "Table",
+    "price": 160,
+    "dim_l": 200,
+    "dim_w": 120,
+    "dim_h": 90,
+    "pic": "https://images-na.ssl-images-amazon.com/images/I/516qbjCXW5L._AC_.jpg",
+    "category": "table",
+    "color": "dark_wood",
+    "material": "wood",
+    "status": "validation_pending"
   }
 ]
