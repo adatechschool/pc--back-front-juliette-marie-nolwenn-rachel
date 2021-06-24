@@ -1,17 +1,15 @@
 <template>
   <div>
     <b-col>
-      <img :title="pic" :src="pic" />
       <b-card
-        :title="pic"
-        img-src=""
+        :img-src="pic"
         img-alt="Image"
         img-top
         tag="article"
         style="max-width: 20rem"
         class="mb-2"
       >
-        <b-card-text :title="price"> {{ price }}€ </b-card-text>
+        <b-card-text :title="price"> {{ title }} - {{ price }}€ </b-card-text>
         <b-button
           v-b-tooltip.hover
           title="Tooltip content"
